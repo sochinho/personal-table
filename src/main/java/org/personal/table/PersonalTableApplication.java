@@ -10,5 +10,4 @@ public class PersonalTableApplication {
         SpringApplication.run(PersonalTableApplication.class);
     }
 
-
 }
