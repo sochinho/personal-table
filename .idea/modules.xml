@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/personal-table.iml" filepath="$PROJECT_DIR$/personal-table.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oauth2-auth-server-service/oauth2-auth-server-service.iml" filepath="$PROJECT_DIR$/oauth2-auth-server-service/oauth2-auth-server-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/personal-table-service/personal-table-service.iml" filepath="$PROJECT_DIR$/personal-table-service/personal-table-service.iml" />
     </modules>
   </component>
 </project>
