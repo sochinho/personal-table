@@ -1,0 +1,10 @@
+security:
+  basic:
+    authorize-mode:
+  oauth2:
+    resource:
+      id: oauth2_id
+
+oauth2:
+  clientId: acme
+  clientSecret: acmesecret
