@@ -4,7 +4,8 @@ security:
   oauth2:
     resource:
       id: oauth2_id
-
-oauth2:
-  clientId: acme
-  clientSecret: acmesecret
+    client:
+      scope: read, write
+      auto-approve-scopes: '.*'
+      clientId: acme
+      clientSecret: acmesecret

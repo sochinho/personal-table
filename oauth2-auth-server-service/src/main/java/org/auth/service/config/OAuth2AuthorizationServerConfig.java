@@ -28,10 +28,10 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
     private int accessTokenValiditySeconds = 10000;
     private int refreshTokenValiditySeconds = 30000;
 
-    @Value("${oauth2.clientId}")
+    @Value("${security.oauth2.client.clientId}")
     private String clientId;
 
-    @Value("${oauth2.clientSecret}")
+    @Value("${security.oauth2.client.clientSecret}")
     private String clientSecret;
 
     @Value("${security.oauth2.resource.id}")
