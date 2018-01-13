@@ -17,19 +17,21 @@ import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 @EnableResourceServer
 public class OAuth2ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
-//    @Value("${security.ouath2.resource.id}")
-//    private String resourceId;
+    @Value("${security.oauth2.resource.id}")
+    private String resourceId;
 
     @Override
     public void configure(ResourceServerSecurityConfigurer config) {
         config.tokenServices(tokenServices());
+        config.resourceId(resourceId);
     }
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http
-            .antMatcher("/notes/**")
-            .authorizeRequests().anyRequest().authenticated();
+                .requestMatchers().antMatchers("/notes", "/notes/**")
+                .and()
+                .authorizeRequests().anyRequest().access("#oauth2.hasScope('write')");
     }
 
     @Bean

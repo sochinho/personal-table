@@ -1,11 +1,9 @@
 package org.personal.table.service;
 
-import org.personal.table.model.User;
-
-import java.util.List;
+import org.personal.table.model.Note;
 
 public interface NoteService {
 
-    public List<User> getNote(Long id);
+    public Note getNote(Long id);
 
 }

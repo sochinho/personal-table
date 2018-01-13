@@ -1,0 +1,9 @@
+/home/sochinho/IdeaProjects/personal-table/personal-table-service/src/main/java/org/personal/table/config/ApplicationConfiguration.java
+/home/sochinho/IdeaProjects/personal-table/personal-table-service/src/main/java/org/personal/table/model/Note.java
+/home/sochinho/IdeaProjects/personal-table/personal-table-service/src/main/java/org/personal/table/web/NoteController.java
+/home/sochinho/IdeaProjects/personal-table/personal-table-service/src/main/java/org/personal/table/config/oauth2/SecurityConfig.java
+/home/sochinho/IdeaProjects/personal-table/personal-table-service/src/main/java/org/personal/table/config/oauth2/OAuth2ResourceServerConfig.java
+/home/sochinho/IdeaProjects/personal-table/personal-table-service/src/main/java/org/personal/table/service/NoteService.java
+/home/sochinho/IdeaProjects/personal-table/personal-table-service/src/main/java/org/personal/table/model/BaseEntity.java
+/home/sochinho/IdeaProjects/personal-table/personal-table-service/src/main/java/org/personal/table/PersonalTableApplication.java
+/home/sochinho/IdeaProjects/personal-table/personal-table-service/src/main/java/org/personal/table/model/User.java

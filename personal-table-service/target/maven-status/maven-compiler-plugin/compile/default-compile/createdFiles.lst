@@ -1,0 +1,9 @@
+org/personal/table/service/NoteService.class
+org/personal/table/config/ApplicationConfiguration.class
+org/personal/table/model/Note.class
+org/personal/table/config/oauth2/SecurityConfig.class
+org/personal/table/model/User.class
+org/personal/table/config/oauth2/OAuth2ResourceServerConfig.class
+org/personal/table/model/BaseEntity.class
+org/personal/table/web/NoteController.class
+org/personal/table/PersonalTableApplication.class

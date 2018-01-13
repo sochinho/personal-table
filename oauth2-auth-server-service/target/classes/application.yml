@@ -9,3 +9,6 @@ security:
       auto-approve-scopes: '.*'
       clientId: acme
       clientSecret: acmesecret
+
+server:
+  port: 9103
