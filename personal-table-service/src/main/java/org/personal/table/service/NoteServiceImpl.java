@@ -11,10 +11,8 @@ public class NoteServiceImpl implements NoteService {
     NoteRepository noteRepository;
 
     @Override
-    public Note getNote(Long id) {
+    public Note getNote(Long id) throws NoNoteException {
 
-        Note note = noteRepository.findById(id).orElseThrow(new NoNoteException("No note with specified ID."));
-
-        return note;
+        return noteRepository.findById(id).orElseThrow(() -> new NoNoteException("No note with specified ID."));
     }
 }
