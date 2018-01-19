@@ -5,6 +5,11 @@ import org.personal.table.model.Note;
 
 public interface NoteService {
 
-    public Note getNote(Long id) throws NoNoteException;
+    /**
+     * @param id
+     * @return
+     */
+
+    public Note getNote(Long id) ;
 
 }

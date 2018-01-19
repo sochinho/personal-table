@@ -1,5 +1,6 @@
 package org.personal.table.web;
 
+import lombok.AllArgsConstructor;
 import org.personal.table.model.Note;
 import org.personal.table.service.NoteService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,13 +11,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/notes")
+@AllArgsConstructor(onConstructor = @__(@Autowired))
+@RequestMapping(value = "/notes")
 public class NoteController {
 
     @Autowired
-    NoteService noteService;
+    private final NoteService noteService;
 
-    @GetMapping("/{id}")
+    @GetMapping(value = "/{id}")
     public ResponseEntity<Note> returnHello(@PathVariable("id") Long id) {
         return ResponseEntity.ok(noteService.getNote(id));
     }

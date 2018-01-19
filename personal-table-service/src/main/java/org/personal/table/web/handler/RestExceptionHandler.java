@@ -2,18 +2,20 @@ package org.personal.table.web.handler;
 
 import org.personal.table.exception.NoNoteException;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 @RestControllerAdvice
-public class RestExceptionHandler {
+public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 
-    @ExceptionHandler({NoNoteException.class})
+    @ExceptionHandler(NoNoteException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public ResponseEntity<Void> handleNoFoundError() {
-        return ResponseEntity.notFound().build();
+    public ErrorMessage handleNoFoundError(Exception e) {
+        return new ErrorMessage(e.getMessage());
     }
 
 }
