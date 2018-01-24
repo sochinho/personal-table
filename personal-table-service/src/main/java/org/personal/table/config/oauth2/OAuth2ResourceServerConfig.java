@@ -29,9 +29,11 @@ public class OAuth2ResourceServerConfig extends ResourceServerConfigurerAdapter 
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http
-                .requestMatchers().antMatchers("/notes", "/notes/**")
-                .and()
-                .authorizeRequests().anyRequest().access("#oauth2.hasScope('write')");
+                .authorizeRequests().antMatchers("/h2_console/**").permitAll()
+                .anyRequest().authenticated();
+
+        http.csrf().disable();
+        http.headers().frameOptions().disable();
     }
 
     @Bean

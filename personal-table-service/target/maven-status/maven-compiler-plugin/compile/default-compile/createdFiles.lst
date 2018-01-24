@@ -1,12 +1,16 @@
 org/personal/table/config/WebConfig.class
+org/personal/table/exception/NoUserException.class
 org/personal/table/model/Note.class
 org/personal/table/exception/NoNoteException.class
 org/personal/table/repository/NoteRepository.class
 org/personal/table/config/oauth2/OAuth2ResourceServerConfig.class
+org/personal/table/service/NoteServiceImpl.class
 org/personal/table/web/NoteController.class
 org/personal/table/PersonalTableApplication.class
 org/personal/table/service/NoteService.class
 org/personal/table/web/handler/ErrorMessage.class
+org/personal/table/model/enums/NoteType.class
+org/personal/table/repository/UserRepository.class
 org/personal/table/config/oauth2/SecurityConfig.class
 org/personal/table/web/handler/RestExceptionHandler.class
 org/personal/table/model/User.class

@@ -1,7 +1,8 @@
 package org.personal.table.service;
 
-import org.personal.table.exception.NoNoteException;
 import org.personal.table.model.Note;
+
+import java.util.List;
 
 public interface NoteService {
 
@@ -10,6 +11,13 @@ public interface NoteService {
      * @return
      */
 
-    public Note getNote(Long id) ;
+    Note getNote(Long id);
+
+    /**
+     * @param userId
+     * @return
+     */
+    
+    List<Note> getUserNotes(Long userId);
 
 }

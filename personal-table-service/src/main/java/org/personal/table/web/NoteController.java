@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 @RequestMapping(value = "/notes")
@@ -19,8 +21,13 @@ public class NoteController {
     private final NoteService noteService;
 
     @GetMapping(value = "/{id}")
-    public ResponseEntity<Note> returnHello(@PathVariable("id") Long id) {
+    public ResponseEntity<Note> getNoteById(@PathVariable("id") Long id) {
         return ResponseEntity.ok(noteService.getNote(id));
+    }
+
+    @GetMapping(value = "/user/{userId}")
+    public ResponseEntity<List<Note>> getUserNotes(@PathVariable("userId") Long userId) {
+        return ResponseEntity.ok(noteService.getUserNotes(userId));
     }
 
 }
