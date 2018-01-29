@@ -1,10 +1,12 @@
 package org.personal.table.model;
 
+import lombok.Data;
 import org.personal.table.model.enums.NoteType;
 
 import javax.persistence.*;
 import java.util.Date;
 
+@Data
 @Entity
 @Table(name = "notes")
 public class Note extends BaseEntity {

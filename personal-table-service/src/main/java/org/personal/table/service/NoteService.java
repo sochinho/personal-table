@@ -1,5 +1,6 @@
 package org.personal.table.service;
 
+import org.personal.table.dto.NoteDto;
 import org.personal.table.model.Note;
 
 import java.util.List;
@@ -11,13 +12,13 @@ public interface NoteService {
      * @return
      */
 
-    Note getNote(Long id);
+    NoteDto getNote(Long id);
 
     /**
      * @param userId
      * @return
      */
-    
-    List<Note> getUserNotes(Long userId);
+
+    List<NoteDto> getUserNotes(Long userId);
 
 }
